@@ -1,0 +1,168 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+
+/* globle */
+
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+@font-face{
+    font-family: Montserrat;
+    src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+    font-weight: 500;
+}
+@font-face{
+    font-family: Fraunces;
+    src: url(fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-weight: 700;
+}
+
+body{
+    background-color: var(--Cream);
+    font-size: 14px;
+    /* font-family: Montserrat, fraunces; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* main */
+main{
+    background-color: var(--White);
+    width: 85%;
+    border-radius: 1.2em;
+    -webkit-border-radius: 1.2em;
+    -moz-border-radius: 1.2em;
+    -ms-border-radius: 1.2em;
+    -o-border-radius: 1.2em;
+
+}
+
+main img{
+    border-top-left-radius: 1.2em;
+    border-top-right-radius: 1.2em;
+}
+
+main h1{
+    color: var(--Very-dark-blue);
+    font-family: Fraunces ;
+    font-weight: 700;
+    padding: 0.700em;
+
+}
+main .text :nth-child(1){
+    color: var(--Dark-grayish-blue);
+    font-family: Montserrat ;
+    font-weight: 500;
+    padding: 1em;
+    letter-spacing: 5px;
+    
+}
+
+main .text :nth-child(3){
+    color: var(--Dark-grayish-blue);
+    font-family: Montserrat ;
+    font-weight: 500;
+    /* padding: 0.700em  1.2em; */
+    padding: 1em;
+}
+
+main .add{
+    padding: 1em;
+}
+
+main .add .text-1{
+    display: flex;
+    align-items: center;
+
+}
+
+main .add .text-1 :nth-child(1){
+    color: var(--Dark-cyan);
+    font-family: Fraunces ;
+    font-size: 25px;
+    margin-right: 0.625em;
+    
+}
+
+
+main .add .text-1 :nth-child(2){
+    text-decoration: line-through;
+    color: var(--Dark-grayish-blue);
+}
+
+main .add button{
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    font-family: Montserrat;
+    font-weight: 700 ;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    border: var(--Dark-cyan);
+    border-radius: 0.625em;
+    -webkit-border-radius: 0.625em;
+    -moz-border-radius: 0.625em;
+    -ms-border-radius: 0.625em;
+    -o-border-radius: 0.625em;
+}
+
+main .add button:active{
+    background-color: hsl(125.72deg 100% 16.54%);;
+    color: white;
+}
+
+main .image{
+    width: 100%;
+    height: 230px;
+    background-image: url(images/image-product-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+/* media query */
+
+@media screen and (min-width: 800px) {
+    
+    main{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    main .container{
+        height: 500px;
+    }
+
+    main .image{
+        width: 100%;
+        height: 500px;
+        background-image: url(images/image-product-desktop.jpg);
+        background-size: cover;
+        background-position: center;
+        border-top-left-radius: 1em;
+        border-bottom-left-radius: 1em;
+        border-top-right-radius: 0;
+    }
+}
+
+
